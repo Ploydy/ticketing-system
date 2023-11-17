@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import DeleteBlock from "./DeleteBlock";
 import PriorityDisplay from "./PriorityDisplay";

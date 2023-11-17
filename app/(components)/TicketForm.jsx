@@ -30,6 +30,8 @@ const TicketForm = ({ ticket }) => {
       if (!res.ok) {
         throw new Error("Failed to update Ticket.");
       }
+      router.refresh();
+      router.push("/");
     } else {
       const res = await fetch("/api/Tickets", {
         method: "POST",

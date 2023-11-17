@@ -2,6 +2,7 @@ import Ticket from "@/app/(models)/Ticket";
 import { NextResponse } from "next/server";
 
 export async function GET(req, { params }) {
+  console.log('GET ID RAN')
   try {
     const { id } = params
 
@@ -15,6 +16,7 @@ export async function GET(req, { params }) {
 
 
 export async function DELETE(req, { params }) {
+  console.log('DELETE RAN');
   try {
 
     const { id } = params
@@ -27,6 +29,7 @@ export async function DELETE(req, { params }) {
 }
 
 export async function PUT(req, { params }) {
+  console.log('PUT RAN');
   try {
 
     const { id } = params
@@ -37,7 +40,7 @@ export async function PUT(req, { params }) {
       ...ticketData,
     });
 
-    return NextResponse.json({ message: 'ticket Updated' }, { status: 200 })
+    return NextResponse.json({ message: 'ticket Updated', updateTicketData }, { status: 200 })
   } catch (error) {
     return NextResponse.json({ message: "Error", error }, { status: 500 });
   }
