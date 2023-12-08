@@ -1,4 +1,5 @@
-import Ticket from "@/app/(models)/Ticket";
+
+import Ticket from '../../../(models)/Ticket'
 import { NextResponse } from "next/server";
 
 export async function GET(req, { params }) {
